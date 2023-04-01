@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+/*共通部分*/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  color: #24292E;
+  background: #fee;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  padding: 0 4%;
+}
+
+/* header --------------------------------------*/
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  height: 270px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+#header ul {
+  display: flex;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+#header li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+#header li :hover {
+  opacity: 0.6;
+}
+
+#header a {
+  color: #24292e;
+}
+
+#header nav img {
+  height: 20px;
+}
+
+/* mainvisual -----------------------------------------*/
+
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.mainvisual-pc { display: block !important; }
+.mainvisual-sp { display: none !important; }
+ 
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 600px) {
+    .mainvisual-pc {
+      display: none !important; 
+    }
+    .mainvisual-sp { 
+      display: block !important;                 
+      width: 100%;
+      height: 40px;
+    }
+}
+
+#mainvisual {
+  margin-bottom: 80px;
+}
+
+#mainvisual img {
+  height: 420px;
+  object-fit: cover;
+}
+
+/* main ---------------------------------------------------*/
+
+main h2 {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+/* about --------------------------------------------------*/
+
+.about-text {
+  display: grid;
+  gap: 30px;
+  font-size: 0.9rem;
+}
+
+#about .self-introduction {
+  text-align: justify;
+}
+
+/* works --------------------------------------------------*/
+
+#works li {
+  list-style: none;
+  width: 31%;
+  margin-bottom: 23px;
+}
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+/* news -----------------------------------------------------*/
+
+#news dl {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  border-top: 1px solid #C8C8C8;
+}
+
+#news dt {
+  width: 20%;
+  padding: 15px;
+  border-bottom: 1px solid #C8C8C8;
+}
+
+#news dd {
+  width: 80%;
+  padding: 15px;
+  border-bottom: 1px solid #C8C8C8;
+}
+
+/* contact -------------------------------------------------*/
+
+#contact dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contact dt {
+  width: 15%;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+#contact dd {
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+input[type="text"], 
+input[type="email"],
+textarea {
+  border: 1px solid #C8C8C8;
+  width: 100%;
+  padding: 10px;
+}
+
+textarea {
+  height: 10rem;
+}
+
+.button {
+  text-align: center;
+}
+
+
+.button :hover {
+  background: #fff;
+  color: #24292e;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  height: 53px;
+  width: 200px;
+  background: #24292e;
+  color: #fff;
+  border: 1px solid #24292e;
+  font-size: 0.9rem;
+}
+
+/* footer ---------------------------------------------------*/
+
+footer {
+  background: #24292E;
+}
+
+footer p {
+  font-size: 0.625rem;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+}
+
+
+
+/*モバイル版------------------------------------------------------------------*/
+
+@media (max-width: 600px) {
+
+  /* 共通部分 -----------------------------------------*/
+
+  .wrapper {
+    margin-bottom: 70px;
+  }
+
+  /* header -------------------------------------------*/
+
+  #header {
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 102px;
+  }
+
+  #header ul {
+    font-size: 0.8rem;
+  }
+
+  #header li {
+    margin: 0 10px 0 10px;
+  }
+
+    /* mainvisual ---------------------------------------*/
+
+
+    /* main ---------------------------------------------*/
+
+  main h2 {
+    margin-bottom: 40px;
+  }
+
+    /* about ----------------------------------------------*/
+
+    /* works --------------------------------------------*/
+
+  .works-list {
+    flex-direction: column;
+  }
+
+  #works li {
+    width: 100%;
+  }
+
+    /* news ----------------------------------------------*/
+
+#news dt {
+  width: 20%;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+#news dd {
+  width: 100%;
+  padding-top: 0;
+}
+
+    /* contact -------------------------------------------*/
+
+    #contact dd {
+      width: 100%;
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
